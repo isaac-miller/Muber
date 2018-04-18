@@ -1,0 +1,15 @@
+<h1>DRIVERS</h1>
+<form action="/drivers" method="GET">
+    <label for="lng">lng</label>
+    <input type="text" name="lng" value="-80.253" id="lng">
+    <label for="lat">lat</label>
+    <input type="text" name="lat" value="25.791" id="lat">
+    <input type="submit">
+</form>
+<% if (drivers.length > 0) { %>
+    <% drivers.forEach( (driver) => {  %>
+        <p><%= driver.obj.email %></p>
+    <% }); %>
+<% } else { %>
+    <p>No drivers near location</p>
+<% } %>
